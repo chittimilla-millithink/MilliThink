@@ -1,2 +1,2 @@
 # MilliThink
-MilliThink Innovative Solutions offering Services to Customers to succeed in their problem solving
+MilliThink Innovative Solutions | Built with Logic & Delivered with Precision
