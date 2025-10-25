@@ -66,6 +66,76 @@
             color: #667eea;
         }
 
+        /* Popup Styles */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.15);
+            z-index: 1000;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        .popup-message {
+            color: #2d3748;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .popup-close {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 0.75rem 2rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .popup-close:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translate(-50%, -60%);
+                opacity: 0;
+            }
+            to {
+                transform: translate(-50%, -50%);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -818,7 +888,8 @@
 
                 <div class="contact-form">
                     <h3>Send us a Message</h3>
-                    <form id="contactForm">
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="c569d4b1-b0d4-41c2-adda-da3ee35f01fa" />
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" id="name" name="name" required>
@@ -833,11 +904,12 @@
                             <label for="service">Service Interest</label>
                             <select id="service" name="service">
                                 <option value="">Select a service</option>
-                                <option value="software">Software Development</option>
-                                <option value="web">Web Development</option>
-                                <option value="iot">IoT Integration</option>
-                                <option value="analytics">Data Analytics</option>
-                                <option value="engineering">Data Engineering</option>
+                                <option value="software">Data Analytics</option>
+                                <option value="web">Data Engineering</option>
+                                <option value="iot">Web Development</option>
+                                <option value="analytics">Software Development</option>
+                                <option value="engineering">IoT Configuration Support</option>
+                                <option value="engineering">Any Other</option>
                             </select>
                         </div>
                         
@@ -854,6 +926,54 @@
     </section>
 
     <!-- Footer -->
+    <!-- Popup Message -->
+    <div class="popup-overlay" id="popupOverlay"></div>
+    <div class="popup" id="popup">
+        <div class="popup-message">
+            Thank you for reaching out to us with your request. We sincerely appreciate your consideration and will contact you as soon as possible to assist you.
+        </div>
+        <button class="popup-close" onclick="closePopup()">Close</button>
+    </div>
+
+    <script>
+        function showPopup() {
+            document.getElementById('popup').style.display = 'block';
+            document.getElementById('popupOverlay').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+            document.getElementById('popupOverlay').style.display = 'none';
+            document.body.style.overflow = '';
+        }
+
+        // Handle form submission
+        document.querySelector('.contact-form form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get the form data
+            const formData = new FormData(this);
+            
+            // Submit the form data using fetch
+            fetch(this.action, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Clear the form
+                this.reset();
+                
+                // Show the popup
+                showPopup();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+
     <footer>
         <div class="footer-container">
             <div class="footer-about">
