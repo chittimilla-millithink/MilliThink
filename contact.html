@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - MilliThink Innovative Solutions</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo"><img src="assets/media/Logo.jpeg" alt="MilliThink Logo"></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact">
+            <div class="contact-container">
+                <div class="section-header">
+                    <h2>Contact Us</h2>
+                    <p>Let's discuss how we can help transform your business with innovative technology solutions.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-details"><h4>Email</h4><p>contact@millithink.com</p></div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-details"><h4>Phone</h4><p>+49 176 55007174</p></div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-details"><h4>Location</h4><p>Remote-First | Cloud-Based Worldwide</p></div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form">
+                        <h3>Send us a Message</h3>
+                        <form action="https://api.web3forms.com/submit" method="POST">
+                            <input type="hidden" name="access_key" value="c569d4b1-b0d4-41c2-adda-da3ee35f01fa" />
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="service">Service Interest</label>
+                                <select id="service" name="service">
+                                    <option value="">Select a service</option>
+                                    <option value="software">Data Analytics</option>
+                                    <option value="web">Data Engineering</option>
+                                    <option value="iot">Web Development</option>
+                                    <option value="analytics">Software Development</option>
+                                    <option value="engineering">IoT Configuration Support</option>
+                                    <option value="other">Any Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-submit">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Popup -->
+    <div class="popup-overlay" id="popupOverlay"></div>
+    <div class="popup" id="popup" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+        <div class="popup-icon" id="popupIcon" aria-hidden="true">
+            <!-- icon inserted by JS -->
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" fill="#48bb78"/>
+                <path d="M16.2 9.2l-4.95 4.95L7.8 9.7" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <div class="popup-title" id="popupTitle">Thank you</div>
+        <div class="popup-message" id="popupMessage">
+            Thank you for reaching out to us with your request. We sincerely appreciate your consideration and will contact you as soon as possible to assist you.
+        </div>
+        <button class="popup-close" onclick="closePopup()">Close</button>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <a href="index.html" class="logo"><img src="assets/media/Logo.jpeg" alt="MilliThink Logo"></a>
+                <p>Transforming businesses through cutting-edge software development and data solutions.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="index.html#services">Software Development</a></li>
+                    <li><a href="index.html#services">Web Development</a></li>
+                    <li><a href="index.html#services">IoT Integration</a></li>
+                    <li><a href="index.html#services">Data Analytics</a></li>
+                    <li><a href="index.html#services">Data Engineering</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="mailto:contact@millithink.com">contact@millithink.com</a></li>
+                    <li><a href="tel:+4917655007174">+49 176 55007174</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MilliThink Innovative Solutions. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
