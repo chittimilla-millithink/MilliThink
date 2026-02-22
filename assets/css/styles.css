@@ -7,7 +7,7 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
-    color: #2d3748;
+    color: #1A202C;
     scroll-behavior: smooth;
 }
 
@@ -48,7 +48,7 @@ nav ul {
 }
 
 nav a {
-    color: #4a5568;
+    color: #374151;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
@@ -56,7 +56,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #667eea;
+    color: #5B4EE6;
 }
 
 /* Popup Styles */
@@ -105,7 +105,7 @@ nav a:hover {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: #f1f5f9;
+    background: #EEF2FF;
 }
 
 .popup .popup-title {
@@ -122,7 +122,7 @@ nav a:hover {
 .popup.error .popup-icon svg { color: #e53e3e; fill: #e53e3e; }
 
 .popup-close {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #5B4EE6 0%, #7C3AED 100%);
     color: white;
     border: none;
     padding: 0.75rem 2rem;
@@ -135,7 +135,7 @@ nav a:hover {
 
 .popup-close:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 5px 15px rgba(91, 78, 230, 0.3);
 }
 
 @keyframes slideIn {
@@ -156,7 +156,7 @@ nav a:hover {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #5B4EE6 0%, #7C3AED 100%);
     color: white;
     padding: 6rem 2rem;
     text-align: center;
@@ -201,7 +201,7 @@ nav a:hover {
 
 .btn-primary {
     background: white;
-    color: #667eea;
+    color: #5B4EE6;
 }
 
 .btn-primary:hover {
@@ -217,13 +217,13 @@ nav a:hover {
 
 .btn-outline:hover {
     background: white;
-    color: #667eea;
+    color: #5B4EE6;
 }
 
 /* Services Section */
 .services {
     padding: 5rem 2rem;
-    background: #f7fafc;
+    background: #F3F4F6;
 }
 
 .section-header {
@@ -234,13 +234,13 @@ nav a:hover {
 .section-header h2 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #2d3748;
+    color: #1A202C;
     margin-bottom: 1rem;
 }
 
 .section-header p {
     font-size: 1.125rem;
-    color: #718096;
+    color: #6B7280;
     max-width: 700px;
     margin: 0 auto;
 }
@@ -276,17 +276,17 @@ nav a:hover {
 }
 .service-icon svg { width: 24px; height: 24px; }
 
-.icon-blue { background: rgba(102,126,234,0.08); color: #667eea; }
+.icon-blue { background: rgba(91,78,230,0.08); color: #5B4EE6; }
 .icon-green { background: rgba(72,187,120,0.08); color: #48bb78; }
 .icon-purple { background: rgba(159,122,234,0.08); color: #9f7aea; }
 .icon-orange { background: rgba(237,137,54,0.08); color: #ed8936; }
 .icon-pink { background: rgba(237,100,166,0.08); color: #ed64a6; }
 
 .service-card h3 { font-size: 1.25rem; margin-bottom: 0.75rem; }
-.service-card p { color: #718096; margin-bottom: 1rem; line-height: 1.6; }
+.service-card p { color: #6B7280; margin-bottom: 1rem; line-height: 1.6; }
 .service-card ul { list-style: none; padding: 0; margin: 0; }
-.service-card li { color: #4a5568; padding: 0.35rem 0; font-size: 0.95rem; }
-.service-card li:before { content: "•"; color: #667eea; display: inline-block; width: 1.2rem; margin-right: 0.4rem; }
+.service-card li { color: #374151; padding: 0.35rem 0; font-size: 0.95rem; }
+.service-card li:before { content: "•"; color: #5B4EE6; display: inline-block; width: 1.2rem; margin-right: 0.4rem; }
 
 /* Why Choose / About Section */
 .why-choose {
@@ -297,49 +297,53 @@ nav a:hover {
 .why-choose-container { max-width: 1200px; margin: 0 auto; }
 .why-choose-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
 .why-choose-left h2 { font-size: 2.25rem; margin-bottom: 1rem; }
-.why-choose-left p { color: #718096; line-height: 1.7; }
+.why-choose-left p { color: #6B7280; line-height: 1.7; }
 
 /* Feature icons in Why-Choose */
 .feature-item { display: flex; gap: 1.25rem; margin-bottom: 2rem; align-items: center; }
-.feature-icon { width: 56px; height: 56px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; margin-bottom: 0; background: rgba(102,126,234,0.08); flex-shrink: 0; }
-.feature-icon svg { width: 24px; height: 24px; color: #667eea; }
+.feature-icon { width: 56px; height: 56px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; margin-bottom: 0; background: rgba(91, 78, 230, 0.08); flex-shrink: 0; }
+.feature-icon svg { width: 24px; height: 24px; color: #5B4EE6; }
 .feature-content h4 { font-size: 1.125rem; margin: 0 0 0.5rem 0; }
-.feature-content p { margin: 0; color: #718096; }
+.feature-content p { margin: 0; color: #6B7280; }
 
 .benefits-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
-.benefit-card { text-align: center; padding: 2rem; background: #f7fafc; border-radius: 12px; transition: all 0.3s ease; }
+.benefit-card { text-align: center; padding: 2rem; background: #F3F4F6; border-radius: 12px; transition: all 0.3s ease; }
 .benefit-card .emoji { font-size: 2rem; margin-bottom: 1rem; }
 
 /* Contact Section */
-.contact { padding: 4rem 2rem; background: #f7fafc; }
+.contact { padding: 4rem 2rem; background: #F3F4F6; }
 .contact-container { max-width: 1100px; margin: 0 auto; }
 .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 2.5rem; align-items: start; }
 .contact-info h3 { font-size: 1.5rem; margin-bottom: 1rem; }
 .contact-item { display: flex; gap: 1rem; margin-bottom: 1rem; align-items: center; }
 .contact-icon { font-size: 1.5rem; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
 .contact-details h4 { margin: 0; font-size: 1rem; }
-.contact-details p { margin: 0; color: #718096; }
+.contact-details p { margin: 0; color: #6B7280; }
 
 .contact-form h3 { margin-bottom: 1rem; }
 .contact-form form { background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 6px 24px rgba(29,31,33,0.04); }
 .form-group { margin-bottom: 1rem; display: flex; flex-direction: column; }
-.form-group label { margin-bottom: 0.5rem; font-weight: 600; color: #2d3748; }
-.form-group input[type="text"], .form-group input[type="email"], .form-group select, .form-group textarea { padding: 0.75rem 1rem; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 1rem; color: #2d3748; }
+.form-group label { margin-bottom: 0.5rem; font-weight: 600; color: #1A202C; }
+.form-group input[type="text"], .form-group input[type="email"], .form-group select, .form-group textarea { padding: 0.75rem 1rem; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 1rem; color: #1A202C; }
 .form-group textarea { min-height: 140px; resize: vertical; }
-.btn-submit { display: inline-block; padding: 0.85rem 1.6rem; background: linear-gradient(135deg,#667eea 0%,#764ba2 100%); color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 700; }
-.btn-submit:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(102,126,234,0.12); }
+.btn-submit { display: inline-block; padding: 0.85rem 1.6rem; background: linear-gradient(135deg,#5B4EE6 0%,#7C3AED 100%); color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 700; }
+.btn-submit:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(91,78,230,0.12); }
 
 /* Footer */
+footer {
+    background: #EEF2FF;
+}
+
 .footer-container { max-width: 1100px; margin: 0 auto; padding: 2.5rem 2rem; display: flex; gap: 2rem; flex-wrap: wrap; justify-content: space-between; }
 .footer-about { flex: 1 1 320px; }
 .footer-about .logo img { height: 48px; }
 .footer-section { flex: 0 0 200px; }
 .footer-section h4 { margin-bottom: 0.75rem; }
 .footer-section ul { list-style: none; padding: 0; margin: 0; }
-.footer-section li { margin-bottom: 0.5rem; color: #4a5568; }
-.footer-section a { color: #4a5568; text-decoration: none; }
-.footer-section a:hover { color: #667eea; }
-.footer-bottom { text-align: center; padding: 1rem 0; color: #718096; border-top: 1px solid #edf2f7; }
+.footer-section li { margin-bottom: 0.5rem; color: #374151; }
+.footer-section a { color: #374151; text-decoration: none; }
+.footer-section a:hover { color: #5B4EE6; }
+.footer-bottom { text-align: center; padding: 1rem 0; color: #6B7280; border-top: 1px solid #e5e7eb; }
 
 /* Responsive */
 @media (max-width: 900px) {
@@ -350,7 +354,7 @@ nav a:hover {
 
 /* Footer background only on homepage to distinguish from Why-Choose section */
 .home footer {
-    background: #f8fafc; /* subtle off-white */
+    background: #EEF2FF;
 }
 .home .footer-container {
     padding-top: 2.5rem;
